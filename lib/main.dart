@@ -4,6 +4,10 @@ void main() {
   runApp(MyApp()); // APP의 메인 페이지, 앱을 시작해주세요
 }
 
+var VariantTest = SizedBox(
+  child: Text('앱임'),
+);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -51,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.star)
         ],
         backgroundColor: Colors.blue,
-        title: Text('앱임'),
+        title: VariantTest,
       ),
       body: Row(
         children: [ // %으로 만들기

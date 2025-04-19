@@ -37,21 +37,26 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('앱임'),
         backgroundColor: Colors.blue,
       ),
-      body: Align( // 하단 정렬하는 방법
-        alignment: Alignment.bottomCenter,
-        child: Container( // Container 데코레이션 하는 방법
-          width: double.infinity, // 가로로 꽉 체우기
-          height: 100,
-          padding: EdgeInsets.all(20), // 페딩 하는 방법
+      body: SizedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center, // 수평 중앙 정렬
+          children: [
+            /* Text 꾸미는 법 */
+            Text(
+              '안녕하세요',
+              style: TextStyle(
+                color: Colors.red, // 텍스트 색상 설정
+                fontWeight: FontWeight.w600, // 텍스트 두께 설정
+                fontSize: 30, // 텍스트 크기 설정
+                // color: Color.fromRGBO(r, g, b, opacity) // RGB를 이용하여 색감 입히기
+              ),
+            ),
+            SizedBox(width: 10), // 텍스트와 아이콘 사이의 간격 설정
 
-          decoration: BoxDecoration( // Container 색, 디자인
-            border: Border.all(color: Colors.black),
-            color: Colors.blue
-          ),
-
-          child: Text('ads'),
+          ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

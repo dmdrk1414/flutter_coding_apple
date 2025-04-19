@@ -33,9 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      /* APP BAR 꾸미는 방법 */
       appBar: AppBar(
-        title: Text('앱임'),
+        leading: Icon(Icons.star), // 앱 왼쪽 위에
+        actions: [ // 앱 오른쪽 위에
+          Icon(Icons.star),
+          Icon(Icons.star)
+        ],
         backgroundColor: Colors.blue,
+        title: Text('앱임'),
       ),
       body: Center(  // 전체를 중앙에 정렬
         child: Column(

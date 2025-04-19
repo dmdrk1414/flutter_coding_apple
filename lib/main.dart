@@ -14,9 +14,18 @@ class MyApp extends StatelessWidget {
       // home: Text('안녕'),
       //home: Icon(Icons.shop), // 아이콘 위젯
       //home: Image.asset('assets/test.png')
-      home: Center( // Center() 위젯은 자식 child 위젯의 position을 정가운데로 잡아주는 유용한 위젯일 뿐입니다.
-          child: Container(width : 50, height : 50, color: Colors.blue)
-      )
+
+      // home: Center( // Center() 위젯은 자식 child 위젯의 position을 정가운데로 잡아주는 유용한 위젯일 뿐입니다.
+      //     child: Container(width : 50, height : 50, color: Colors.blue)
+      // )
+
+      home: Scaffold( // 상중하로 나누어 주는 위젯
+        appBar: AppBar(),
+        body: Container(),
+        bottomNavigationBar: BottomAppBar(
+          child: Text('바텀 앱바의 글자쓰기'),
+        ),
+      ),
     );
   }
 }

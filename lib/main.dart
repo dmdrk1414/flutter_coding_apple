@@ -62,6 +62,19 @@ class _MyHomePageState extends State<MyHomePage> {
               size: 30, // 아이콘 크기 설정
             ),
 
+            /* 버튼을 꾸미는 방법 */
+            TextButton(
+                onPressed: (){},
+                child: Text('글자')
+            ),
+            ElevatedButton(
+                onPressed: (){},
+                child: Text('글자')
+            ),
+            IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.star),
+            )
           ],
         ),
       ),

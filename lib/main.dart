@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Align( // 하단 정렬하는 방법
         alignment: Alignment.bottomCenter,
         child: Container( // Container 데코레이션 하는 방법
-          width: 100,
+          width: double.infinity, // 가로로 꽉 체우기
           height: 100,
           padding: EdgeInsets.all(20), // 페딩 하는 방법
 

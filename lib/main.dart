@@ -4,9 +4,8 @@ void main() {
   runApp(MyApp()); // APP의 메인 페이지, 앱을 시작해주세요
 }
 
-var VariantTest = SizedBox(
-  child: Text('앱임'),
-);
+var VariantTest = SizedBox( child: Text('앱임'), );
+var LIST_VIEW_TEXT = SizedBox( child: Text('안녕 LIST 뷰 확인'), );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -59,9 +58,25 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Row(
         children: [ // %으로 만들기
-          Flexible( flex: 5, child: Container(color: Colors.blue,), ),
+          Flexible(
+            flex: 5,
+            child: Container(
+              color: Colors.blue,
+              child: ListView.builder(
+                itemCount: 1000, // 반복할 항목의 개수를 지정합니다. 여기서는 1000으로 설정했습니다.
+                /*  itemBuilder 각 항목을 그릴 때 호출되는 콜백 함수입니다.
+                    index는 항목의 인덱스를 나타냅니다.
+                    이를 통해 각 ListTile의 내용을 동적으로 생성할 수 있습니다. */
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text('Item #${index + 1}'), // 아이템 번호
+                  );
+                },
+              ),
+            ),
+          ),
           Flexible( flex: 5, child: Container(color: Colors.red,), ),
-          Flexible( flex: 5, child: Container(color: Colors.green,), )
+          Flexible( flex: 5, child: Container(color: Colors.green,), ),
         ],
       ),
 

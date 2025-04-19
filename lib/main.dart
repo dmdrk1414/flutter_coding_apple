@@ -52,7 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             SizedBox(width: 10), // 텍스트와 아이콘 사이의 간격 설정
-
+            /* Icon 꾸미는 법 */
+            Icon(
+              Icons.favorite, // 사용할 아이콘 설정
+              color: Colors.blue, // 아이콘 색상 설정
+              size: 30, // 아이콘 크기 설정
+            ),
           ],
         ),
       ),

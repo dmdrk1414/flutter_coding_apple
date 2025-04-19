@@ -21,7 +21,14 @@ class MyApp extends StatelessWidget {
 
       home: Scaffold( // 상중하로 나누어 주는 위젯
         appBar: AppBar(),
-        body: Container(),
+        body: Row( // 가로로 줄줄이 나오게 하는 방법
+          children: const [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+          ],
+        ),
+
         bottomNavigationBar: BottomAppBar(
           child: Text('바텀 앱바의 글자쓰기'),
         ),
